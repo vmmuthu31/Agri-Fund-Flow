@@ -26,23 +26,23 @@ export default function Home() {
         </div>
         <div className="flex flex-wrap gap-16">
           <CaseTile
-            description="Badges can be given to individuals in online communities to recognize contributions and achievements. By securing these badges to a Soulbound token, it can be ensured that they are genuine and cannot be duplicated or traded for profit."
-            title="Badges"
+            description="The platform can be used to validate the work done by farmers, such as crop production, livestock management, or other agricultural activities. This could be used by governments or other organizations to ensure that farmers are meeting certain requirements or standards."
+            title="Validating farmer proof of work"
             icon="/icons/badge.png"
           />
           <CaseTile
-            description="Universities can issue digital certificates to their students that are tied to Soulbound tokens. These tokens can then be used to verify the authenticity of the certificate and prevent any attempts to copy or forge it."
-            title="Certification"
+            description="By creating Soulbound NFTs, the platform can provide a secure and immutable way to track ownership of the validated work done by farmers. This can be useful for farmers to prove their ownership of the work and for lenders or other stakeholders to verify the validity of the work."
+            title="Issuing Soulbound NFTs"
             icon="/icons/cert.png"
           />
           <CaseTile
-            description="Professional licenses, such as those obtained by doctors, lawyers, and accountants, can also be secured using Soulbound tokens on blockchain that can be verified as authentic and cannot be transferred or sold to other individuals."
-            title="Licenses"
+            description="The platform can be used to track debts and loans owed by farmers based on their validated work. This could be used by finance departments or lenders to manage loan repayment schedules or to provide financial assistance to farmers based on their work."
+            title="Claiming debts/loans"
             icon="/icons/license.png"
           />
           <CaseTile
-            description="Organizations like a sport organization that hand out awards to their athletes can use the authenticity of a Soulbound token to provide a secure and tamper-proof system for recognizing and rewarding achievements."
-            title="Awards"
+            description="By building the platform on both Polygon Mumbai and Flow chains, the project can provide users with flexibility and choice when it comes to choosing a blockchain platform to use. This could help to increase adoption of the platform and make it more accessible to a wider range of users."
+            title="Cross-chain compatibility"
             icon="/icons/awards.png"
           />
         </div>
