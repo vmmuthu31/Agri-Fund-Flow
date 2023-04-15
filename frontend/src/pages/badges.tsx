@@ -30,8 +30,9 @@ const BadgesPage: NextPage = () => {
       return (
         <BadgeTile
           title={`${badge?.name ?? ''} #${badge?.id}`}
-          imgURL="https://www.pngmart.com/files/12/WhatsApp-Verified-Badge-PNG-File.png"
+          imgURL="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiliTxoFer2H0qWdJ2mAF3I7fUVAjoeGTrc_yY4tI3VAw4QNPPAs2SvJkpfJvY0ymu6gOXJkgPU93AFdm3tGP6M7mbFRBDFcgsJZ4pULIzPoOEzE6F_7n-3q3nlnpOIiwydp1ggRldCldOOLsl8sWuDblbh5H0XQbVt9PxQOgWN5cT3wzSGAjz9uMH8/s320/AgriFund_Badge-removebg-preview.png"
           key={i}
+          hash="8070"
         />
       )
     })
@@ -40,7 +41,7 @@ const BadgesPage: NextPage = () => {
   return (
     <PageLayout title="Badges" authRequired={true}>
       <div className="flex flex-col gap-4 py-12 px-20">
-        <div className="flex flex-wrap gap-12">{renderbadges()}</div>
+        <div className="flex flex-wrap gap-12 ">{renderbadges()}</div>
       </div>
     </PageLayout>
   )

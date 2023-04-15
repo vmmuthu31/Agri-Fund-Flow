@@ -3,11 +3,12 @@ import React from 'react'
 interface BTProps {
   imgURL: string
   title: string
+  hash: string
 }
 
-export const BadgeTile: React.FC<BTProps> = ({ imgURL, title }) => {
+export const BadgeTile: React.FC<BTProps> = ({ imgURL, title, hash }) => {
   return (
-    <div className="flex w-fit max-w-[250px] flex-col gap-2 rounded shadow">
+    <div className="flex h-[200] max-w-[250px] flex-col rounded  shadow">
       <img
         src={imgURL}
         alt="Badge Img"
@@ -15,7 +16,10 @@ export const BadgeTile: React.FC<BTProps> = ({ imgURL, title }) => {
         height={200}
         className="rounded-sm"
       />
-      <div className="p-2 font-raj text-lg">{title}</div>
+      <div className="pt-1 text-center font-raj text-lg font-bold">{title}</div>
+      <div className="text-center font-raj text-lg font-bold">
+        Transaction Hash: #{hash}
+      </div>
     </div>
   )
 }

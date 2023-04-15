@@ -11,8 +11,8 @@ export function getConfig(): Record<FlowConfigKey, string> {
   return {
     [FlowNetwork.TESTNET]: {
       [FlowConfigKey['flow.network']]: FlowNetwork.TESTNET,
-      [FlowConfigKey['app.detail.title']]: constants.APP.TITLE ?? '',
-      [FlowConfigKey['app.detail.icon']]: constants.APP.ICON ?? '',
+      [FlowConfigKey['app.detail.title']]: constants.APP.TITLE ?? 'Agri-Fund',
+      [FlowConfigKey['app.detail.icon']]: constants.APP.ICON ?? 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhENUilxHHUTQharTQgs7IPU6cFMSv_h6KHSD82Wk6NjuzvW8Id97Z0TkZcgghsncWqSADiECjYlOJLpVOhVuDi0DWnrVLpqZOGHKlpS8c_or-RuHJ6fFot0yW8t4-EKvCIX10U7rCF9tvmltMCkayNSnxFrJbP-6lHMtJFIkAN9286YfBCi1nPU2DD/s320/Doc1%20(2).png',
       [FlowConfigKey['accessNode.api']]: 'https://access-testnet.onflow.org',
       [FlowConfigKey['discovery.wallet']]:
         'https://fcl-discovery.onflow.org/testnet/authn',

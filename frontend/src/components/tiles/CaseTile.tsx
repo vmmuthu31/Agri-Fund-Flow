@@ -13,7 +13,7 @@ export const CaseTile: React.FC<TileProps> = ({ icon, title, description }) => {
       <div className="border-green-500 bg-gradient-to-r from-green-500 to-green-700 bg-clip-text p-2 font-raj text-2xl font-bold text-transparent">
         {title}
       </div>
-      <p className="font-raj text-xl text-gray-400">{description}</p>
+      <p className="mb-5 font-raj text-xl text-gray-700">{description}</p>
     </div>
   )
 }
