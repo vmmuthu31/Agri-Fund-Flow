@@ -20,7 +20,7 @@ const BadgesPage: NextPage = () => {
     if (data?.length === 0 || hasCollection === false) {
       return (
         <div className="font-raj text-2xl text-green-700">
-          You currently don't own any badges. You can issue some on the 'Create'
+          You currently dont own any badges. You can issue some on the Create
           page.
         </div>
       )
