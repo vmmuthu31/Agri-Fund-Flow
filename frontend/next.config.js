@@ -2,11 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    loader: 'akamai',
-    path: ''
-  },
-  trailingSlash: true
+  trailingSlash: true,
+  eslint: {
+    dirs: ['src'] // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+  }
 }
 
 module.exports = nextConfig
