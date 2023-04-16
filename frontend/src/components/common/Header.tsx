@@ -53,7 +53,7 @@ export const Header = () => {
             >
               Redeem
             </div>
-            <div >
+            <div className="pt-2">
               <DarkModeToggle
                 onChange={darkMode.toggle}
                 checked={darkMode.value}
