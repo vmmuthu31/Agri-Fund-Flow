@@ -40,7 +40,6 @@ export const Header = () => {
           </>
         ) : (
           <>
-            {' '}
             <div
               className=" flex items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer"
               onClick={() => router.push('/badges')}
