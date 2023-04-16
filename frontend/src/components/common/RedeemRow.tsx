@@ -18,31 +18,25 @@ export const RedeemRow: React.FC<RowProps> = ({
     ? 'flex justify-between gap-5 rounded-md bg-green-500 p-6 items-center'
     : 'flex justify-between gap-5 rounded-md bg-green-700 p-6 items-center'
 
-  const fontStyle = alternate ? 'flex min-w-[300px] font-raj text-2xl text-green-700' : 'flex min-w-[300px] font-raj text-2xl text-white'
+  const fontStyle = alternate
+    ? 'flex sm:min-w-[300px] font-raj text-2xl text-green-700'
+    : 'flex sm:min-w-[300px] font-raj text-2xl text-white'
 
   const renderState = () => {
     if (data?.isFulfilled) {
       return <p>Claimed</p>
-    } else if(alternate) {
-      return <GreenButton text="Ready to Mint" onClick={onMintClick} /> 
+    } else if (alternate) {
+      return <GreenButton text="Ready to Mint" onClick={onMintClick} />
     } else {
-      return <WhiteButton text="Ready to Mint" onClick={onMintClick} /> 
+      return <WhiteButton text="Ready to Mint" onClick={onMintClick} />
     }
   }
   return (
     <div className={rowStyle}>
-      <div className={fontStyle}>
-        {renderState()}
-      </div>
-      <div className={fontStyle}>
-        {data?.name}
-      </div>
-      <div className={fontStyle}>
-        {data?.senderAddress}
-      </div>
-      <div className={fontStyle}>
-        {convertTimestamp(data?.issuedAt)}
-      </div>
+      <div className={fontStyle}>{renderState()}</div>
+      <div className={fontStyle}>{data?.name}</div>
+      <div className={fontStyle}>{data?.senderAddress}</div>
+      <div className={fontStyle}>{convertTimestamp(data?.issuedAt)}</div>
     </div>
   )
 }

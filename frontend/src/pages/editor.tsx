@@ -83,14 +83,14 @@ const EditorPage: NextPage = () => {
           <div className="flex items-center gap-2">
             <div className=" flex w-full items-center gap-4">
               <input
-                className="h-[44px] w-[400px] border-2 p-2"
+                className="h-[44px] border-2 p-2 sm:w-[400px]"
                 {...register(String(i), {
                   required: 'This field is required.'
                 })}
                 placeholder="Key"
               />
               <input
-                className="h-[44px] w-[400px] border-2 p-2"
+                className="h-[44px] border-2 p-2 sm:w-[400px]"
                 {...register(String(i + '_val'), {
                   required: 'This field is required.'
                 })}
@@ -192,7 +192,7 @@ const EditorPage: NextPage = () => {
         <div>
           <p className="font-raj text-lg font-semibold">Farmer Name: </p>
           <input
-            className="h-[44px] w-[400px] border-2 p-2"
+            className="h-[44px] border-2 p-2 sm:w-[400px]"
             {...register('badgeName', {
               required: 'This field is required.'
             })}
@@ -210,7 +210,7 @@ const EditorPage: NextPage = () => {
             Farmer Wallet Address:{' '}
           </p>
           <input
-            className="h-[44px] w-[400px] border-2 p-2"
+            className="h-[44px] border-2 p-2 sm:w-[400px]"
             {...register('walletAddr', {
               required: 'This field is required.'
             })}
@@ -228,36 +228,38 @@ const EditorPage: NextPage = () => {
   }
 
   return (
-    <PageLayout title="Editor" authRequired={true}>
-      {renderTxModal()}
-      <div className="flex flex-col gap-4 py-12 px-20">
-        <div className="font-raj text-2xl font-semibold">
-          Proof of File/Image
-        </div>
-        <div className="flex gap-6">
-          <FileDropzone
-            onSuccess={(File) => {
-              setFile(File)
-            }}
-            resetFile={() => {
-              setFile(null)
-            }}
-            fullWidth={false}
-          />
-          <div className="flex flex-col gap-6">
-            {renderNameWallet()}
-            {renderMetadataSection()}
+    <div className="min-w-[770px]">
+      <PageLayout title="Editor" authRequired={true}>
+        {renderTxModal()}
+        <div className="flex  flex-col gap-4 py-12 px-2 sm:px-20">
+          <div className="font-raj text-2xl font-semibold">
+            Proof of File/Image
+          </div>
+          <div className="flex gap-6">
+            <FileDropzone
+              onSuccess={(File) => {
+                setFile(File)
+              }}
+              resetFile={() => {
+                setFile(null)
+              }}
+              fullWidth={false}
+            />
+            <div className="flex flex-col gap-6">
+              {renderNameWallet()}
+              {renderMetadataSection()}
+            </div>
+          </div>
+          <div className="mt-8 ml-80 w-80 sm:ml-96 sm:w-96">
+            <DefaultButton
+              text="Mint"
+              onClick={handleSubmit(issueBadge)}
+              fullWidth={true}
+            />
           </div>
         </div>
-        <div className="mt-8 ml-96 w-96">
-          <DefaultButton
-            text="Mint"
-            onClick={handleSubmit(issueBadge)}
-            fullWidth={true}
-          />
-        </div>
-      </div>
-    </PageLayout>
+      </PageLayout>
+    </div>
   )
 }
 

@@ -13,7 +13,6 @@ export const Header = () => {
 
   const renderAuth = () => {
     if (flowUser?.addr) {
-      console.log(flowUser?.addr)
       return <AccountMenu />
     }
     return <DefaultButton text="Connect Wallet" onClick={loginToWallet} />
@@ -33,7 +32,7 @@ export const Header = () => {
               />
             </div>
             <div
-              className="hidden items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer sm:flex"
+              className=" flex items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer"
               onClick={() => router.push('/editor')}
             >
               Create
@@ -43,18 +42,18 @@ export const Header = () => {
           <>
             {' '}
             <div
-              className="hidden items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer sm:flex"
+              className=" flex items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer"
               onClick={() => router.push('/badges')}
             >
               My Badges
             </div>
             <div
-              className="hidden items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer sm:flex"
+              className=" flex items-center bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-xl font-bold text-transparent hover:scale-110 hover:cursor-pointer"
               onClick={() => router.push('/mint')}
             >
               Redeem
             </div>
-            <div className="pt-14">
+            <div >
               <DarkModeToggle
                 onChange={darkMode.toggle}
                 checked={darkMode.value}
@@ -68,7 +67,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="flex h-20 items-center justify-between px-[35px] shadow-[0_4px_2px_-2px_rgba(0,0,0,0.5)]">
+    <header className="flex h-20 min-w-[770px] items-center justify-between px-[35px] shadow-[0_4px_2px_-2px_rgba(0,0,0,0.5)] sm:w-full">
       <div
         className="flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-700 bg-clip-text font-raj text-2xl font-bold text-transparent hover:cursor-pointer"
         onClick={() => router.push('/')}

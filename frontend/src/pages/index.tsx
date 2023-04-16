@@ -5,11 +5,11 @@ import { PageLayout } from 'layouts'
 export default function Home() {
   const renderMission = () => {
     return (
-      <div className="flex h-[450px] w-full flex-col items-center justify-center gap-8 bg-gradient-to-b from-green-500 to-green-700">
+      <div className="flex h-[450px] w-full min-w-[770px] flex-col items-center justify-center gap-8 bg-gradient-to-b from-green-500 to-green-700">
         <div className="font-raj text-3xl font-semibold text-white">
           Mission
         </div>
-        <div className="w-[500px] text-center font-raj text-xl text-white">
+        <div className="w-[770px] text-center font-raj text-xl text-white">
           Our mission is to validate the farmer proof of work as an Soulbound
           NFT and claim their debts/loans from the finance department. This App
           is now built in both Polygon Mumbai and Flow chains in the Blockchain.
@@ -20,11 +20,11 @@ export default function Home() {
 
   const renderUseCases = () => {
     return (
-      <div className="flex h-fit w-full flex-col items-center justify-center gap-8 p-3">
+      <div className="flex h-fit w-full min-w-[770px] flex-col items-center justify-center gap-8 p-3">
         <div className="mb-6 border-green-500 bg-gradient-to-r from-green-500 to-green-700 bg-clip-text p-2 font-raj text-3xl font-bold text-transparent">
           Use Cases
         </div>
-        <div className="flex flex-wrap gap-16">
+        <div className="flex min-w-[770px] flex-wrap justify-center gap-16">
           <CaseTile
             description="The platform can be used to validate the work done by farmers, such as crop production, livestock management, or other agricultural activities. This could be used by governments or other organizations to ensure that farmers are meeting certain requirements or standards."
             title="Validating farmer proof of work"
@@ -52,11 +52,11 @@ export default function Home() {
 
   const renderSmartContract = () => {
     return (
-      <div className="flex h-fit w-full flex-col items-center justify-center gap-8 bg-gradient-to-r from-green-500 to-green-700 p-3">
-        <div className="mb-6 border-green-500 bg-gradient-to-r from-green-500 to-green-700 bg-clip-text p-2 font-raj text-3xl font-bold text-white text-transparent">
+      <div className="flex h-fit w-full min-w-[770px] flex-col items-center justify-center gap-8 bg-gradient-to-r from-green-500 to-green-700 p-3">
+        <div className="mb-6 border-green-500 bg-gradient-to-r from-green-500 to-green-700 bg-clip-text p-2 font-raj text-3xl font-bold  text-white">
           Smart Contract
         </div>
-        <p className="w-[800px] text-center font-raj text-lg text-black">
+        <p className="min-w-[770px] px-20 text-center font-raj text-lg text-black">
           A soulbound smart contract is a type of smart contract that is
           designed to be permanently and irrevocably attached to a specific
           digital asset, such as a cryptocurrency or a non-fungible token (NFT).
@@ -65,7 +65,7 @@ export default function Home() {
           In other words, transferring or burning a soulbound NFT is not
           possible.
         </p>
-        <p className="w-[800px] text-center font-raj text-lg ">
+        <p className="min-w-[770px] px-20 text-center font-raj text-lg text-black ">
           Our design consists of two smart contracts: an NFT-based soulbound
           smart contract
           <span
@@ -100,7 +100,7 @@ export default function Home() {
           ecosystem, we based the contract implementation off the existing
           NonFungibleToken standard.
         </p>
-        <p className="w-[800px] text-center font-raj text-lg ">
+        <p className="min-w-[770px] px-20 text-center font-raj text-lg text-black ">
           We also designed the contracts such that soulbound tokens can be
           minted on demand, which helps us avoid storage error issues and allows
           us to more easily handle situations where users may not have a
@@ -115,7 +115,7 @@ export default function Home() {
       {renderMission()}
       {renderUseCases()}
       {renderSmartContract()}
-      <div className=" mt-2 mb-2 flex justify-between px-10">
+      <div className="mt-2 mb-2 flex min-w-[770px] flex-col justify-between px-10 sm:flex-row">
         <h3 className=" text-center text-lg  text-black ">
           Follow us on Twitter, Insta
         </h3>
