@@ -23,7 +23,6 @@ export const Header = () => {
       <div className="flex gap-[40px]">
         {flowUser?.addr == '0x097c84c3dd0ef49b' ? (
           <>
-            {' '}
             <div className="pt-14">
               <DarkModeToggle
                 onChange={darkMode.toggle}
